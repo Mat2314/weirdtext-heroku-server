@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 #DEBUG = True
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'weirdtext-server.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'weirdtext-server.herokuapp.com', 'weirdtext-client.herokuapp.com']
 
 # Application definition
 
