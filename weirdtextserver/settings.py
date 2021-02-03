@@ -58,7 +58,8 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1',
-    'https://weirdtext-server.herokuapp.com/'
+    'https://weirdtext-server.herokuapp.com/',
+    'https://weirdtext-client.herokuapp.com/'
 )
 
 ROOT_URLCONF = 'weirdtextserver.urls'
