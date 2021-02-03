@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import ping
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ping/', ping, name="ping"),
     path('v1/', include('weirdtextserver.apps.weirdtext.urls'))
 ]
 
