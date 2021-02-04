@@ -38,3 +38,9 @@ which basically means that length of original words array and length of the weir
 ## Running the application locally
 
 To run the server locally download this repo and do the following steps:
+
+- Go to `environments` directory
+- Run script `./localenv.sh`
+- Go back to root directory
+- Run `docker-compose up` 
+- The server should be listening on localhost on port 8000
