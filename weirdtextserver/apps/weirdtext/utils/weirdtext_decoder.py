@@ -15,7 +15,6 @@ def check_input_validity(weirdtext: str, original_words: list):
     # First check magic separator in the text
     magic_separator = "\n--weird--\n"
     if not weirdtext.startswith(magic_separator) or not weirdtext.endswith(magic_separator):
-        print(weirdtext)
         raise ValueError("Weirdtext does not contain a magic separator")
 
     # Now remove the magic separator
@@ -67,8 +66,7 @@ def decode(weirdtext: str, original_words: list) -> str:
     try:
         check_input_validity(weirdtext, original_words)
     except ValueError as e:
-        print(e)
-        return "Error:" + e.args[0]
+        raise ValueError('Function can not be executed due to incorrect input value: ', e.args[0])
 
     # Clean weirdtext from separators
     magic_separator = "\n--weird--\n"

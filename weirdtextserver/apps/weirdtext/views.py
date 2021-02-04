@@ -34,5 +34,9 @@ class DecodeViewSet(viewsets.ViewSet):
         - weirdtext: string
         - original_words: list
         """
-        message = decode(request.data['weirdtext'], request.data['original_words'])
-        return JsonResponse({"ok": "Successfully decoded the message", "decoded_message": message})
+        try:
+            message = decode(request.data['weirdtext'], request.data['original_words'])
+            return JsonResponse({"ok": "Successfully decoded the message", "decoded_message": message})
+        except ValueError as e:
+            print(e)
+            return JsonResponse({"error": "Could not decode the message", "error_type": e.args[1]})
