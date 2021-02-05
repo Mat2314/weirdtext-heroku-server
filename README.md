@@ -1,5 +1,6 @@
 # WeirdText Server
 A web server which enables encoding and decoding weirdtext messages.
+A running application testing server functionalities can be found here: https://weirdtext-client.herokuapp.com/
 
 ## Endpoints
 The server runs by default on port 8000. 
